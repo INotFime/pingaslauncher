@@ -2,7 +2,7 @@
 bad launcher written in python
 
 ## How To Install
-1. Install Depedencies
+1. Install [Python](https://www.python.org/downloads/) And Depedencies
 ```
 pip install portablemc
 pip install dearpygui
