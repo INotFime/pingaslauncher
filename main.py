@@ -57,13 +57,13 @@ def ban():
     ip = dpg.get_value("rconip")
     port = dpg.get_value("rconport")
     password = dpg.get_value("rconpass")
-    os.system(f'mcrcon {ip} -P {port} -p {password} "ban {nick} {reason}"')
+    os.system(f'mcrcon -H {ip} -P {port} -p {password} "ban {nick} {reason}"')
 
 def terminal():
     ip = dpg.get_value("rconip")
     port = dpg.get_value("rconport")
     password = dpg.get_value("rconpass")
-    os.system(f'mcrcon\mcrcon.exe {ip} -P {port} -p {password}')
+    os.system(f'mcrcon\mcrcon.exe -H {ip} -P {port} -p {password}')
 
 # Setting Theme For Hyperlinks
 with dpg.theme(tag="hyperlinkTheme"):
