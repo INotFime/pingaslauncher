@@ -4,7 +4,7 @@ import dearpygui.dearpygui as dpg
 import webbrowser
 
 # Lists For Preset Versions And window Positions
-verlist = ["MineReam", "MCC Island", "Latest", "Custom"]
+verlist = ["Latest", "Custom"]
 accountpos = [0, 125]
 custompos = [350, 125]
 aboutpos = [650, 287]
@@ -38,18 +38,6 @@ def custom():
         os.system(f'portablemc --main-dir {folder} start {version} -l {email} -m')
     else:
         os.system(f'portablemc --main-dir {folder} start {version} -u {email}')
-
-def mineream():
-    ismsa = dpg.get_value("msaenabled")
-    email = dpg.get_value("email")
-    if ismsa == True:
-        os.system(f'portablemc --main-dir G:/PyProjects/PingasLauncher/versions/mineream start fabric:1.19.2 -l {email} -m -s mineream.aboba.host')
-    else:
-        os.system(f'portablemc --main-dir G:/PyProjects/PingasLauncher/versions/mineream start fabric:1.19.2 -u {email} -s mineream.aboba.host')
-
-def mccisland():
-    email = dpg.get_value("email")
-    os.system(f'portablemc --main-dir G:/PyProjects/PingasLauncher/versions/mcc start fabric:1.19.2 -l {email} -m -s play.mccisland.net')
 
 def latest():
     ismsa = dpg.get_value("msaenabled")
