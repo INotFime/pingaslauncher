@@ -17,14 +17,7 @@ dpg.create_viewport(title='PingasLauncher', width=854, height=480)
 def verselect():
     ver = dpg.get_value("verlist")
     ismsa = dpg.get_value("msaenabled")
-    if ver == "MineReam":
-        mineream()
-    elif ver == "MCC Island":
-        if ismsa == True:
-            mccisland()
-        else:
-            dpg.configure_item("error_onlylicense", show=True)
-    elif ver == "Latest":
+    if ver == "Latest":
         latest()
     else:
         custom()
